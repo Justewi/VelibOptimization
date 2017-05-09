@@ -3,24 +3,18 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Runtime.Serialization;
-using System.ServiceModel;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Velibs
+namespace VelibsClient
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
-    public class VelibsOptimisation : IVelibsOptimisation
+    class Program
     {
-        public string GetData(int value)
+        static void Main(string[] args)
         {
-            return string.Format("You entered: {0}", value);
-        }
 
-        public string GetTraject(double lngOrigin, double latOrigin, double lngDestination, double latDestination)
-        {
             StringBuilder output = new StringBuilder();
-            
+
 
             WebRequest request = WebRequest.Create(
                 "http://www.velib.paris/service/carto");
@@ -38,7 +32,7 @@ namespace Velibs
             string responseFromServer = reader.ReadToEnd();
             // Display the content.
             //Données a parser
-            
+
 
 
 
@@ -49,22 +43,6 @@ namespace Velibs
 
             Console.WriteLine("Voulez vous quitter ? ");
             Console.ReadLine();
-
-            return output.ToString();
-        }
-
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
         }
     }
 }
