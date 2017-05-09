@@ -15,6 +15,15 @@ namespace Velibs
             return string.Format("You entered: {0}", value);
         }
 
+        public string GetTraject(double lngOrigin, double latOrigin, double lngDestination, double latDestination)
+        {
+            StringBuilder output = new StringBuilder();
+
+
+            return output.ToString();
+        }
+
+
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)

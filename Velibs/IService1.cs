@@ -15,6 +15,9 @@ namespace Velibs
         string GetData(int value);
 
         [OperationContract]
+        string GetTraject(double lngOrigin , double latOrigin, double lngDestination, double latDestination);
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
