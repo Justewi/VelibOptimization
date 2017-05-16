@@ -261,3 +261,5 @@ __pycache__/
 *.pyc
 /Velibs/Properties/Settings.settings
 /Velibs/Properties/Settings.Designer.cs
+/VelibsClient/Properties/Settings.settings
+/VelibsClient/Properties/Settings.Designer.cs
