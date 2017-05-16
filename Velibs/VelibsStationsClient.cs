@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Xml;
@@ -35,6 +36,22 @@ namespace Velibs
                 stations.Add(Convert.ToInt32(marker.Attributes["number"].Value),new Station(marker));
             }
             return stations;
+        }
+
+        public Station GetClosestStation(Coordonnes point)
+        {
+            Station station = null;
+            double distance = Double.MaxValue;
+            foreach (KeyValuePair<int,Station> pair in _stations)
+            {
+                double dst = point.Distance(pair.Value.Coordonnes);
+                if (dst < distance)
+                {
+                    station = pair.Value;
+                    distance = dst;
+                }
+            }
+            return station;
         }
 
     }
