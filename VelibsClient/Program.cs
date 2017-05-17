@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using Velibs.Properties;
+using VelibsClient.VelibsService;
 
 namespace VelibsClient
 {
@@ -13,7 +7,10 @@ namespace VelibsClient
     {
         static void Main(string[] args)
         {
-
+            VelibsOptimisationClient client = new VelibsOptimisationClient();
+            string response = client.GetDirections("Musée de l'Armée", "Le Palais Royal");
+            Console.Write(response);
+            Console.ReadLine();
         }
     }
 }
