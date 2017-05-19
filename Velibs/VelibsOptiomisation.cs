@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Globalization;
+using System.Threading;
 using Velibs.Properties;
-using VelibsClient;
 
 namespace Velibs
 {
     public class VelibsOptimisation : IVelibsOptimisation
     {
-        public string GetDirections(string origin, string destination)
+        public List<string> GetDirections(string origin, string destination)
         {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
             MapsClient maps = new MapsClient(Settings.Default.GoogleMapsAPIKey);
 
             Coordonnes org = maps.GetCoordinates(origin);
@@ -23,10 +17,25 @@ namespace Velibs
 
             VelibsStationsClient velibs = new VelibsStationsClient();
 
-            Station station_org = velibs.GetClosestStation(org);
-            Station station_dest = velibs.GetClosestStation(dest);
+            Station stationOrg = velibs.GetClosestStation(org);
+            Station stationDest = velibs.GetClosestStation(dest);
 
-            return string.Format(station_org.Address + " -> " + station_dest.Address);
+            List<string> directions = new List<string>();
+            if (org.Distance(stationOrg.Coordonnes) + dest.Distance(stationDest.Coordonnes) < org.Distance(dest))
+            {
+                directions.AddRange(maps.GetDirections(org, stationOrg.Coordonnes, TravelMode.Walking));
+                directions.Add("Get a velib from station " + stationOrg.Name);
+                directions.AddRange(maps.GetDirections(stationOrg.Coordonnes, stationDest.Coordonnes,
+                    TravelMode.Bicycling));
+                directions.Add("Put back the velib at the station " + stationDest.Name);
+                directions.AddRange(maps.GetDirections(stationDest.Coordonnes, dest, TravelMode.Walking));
+            }
+            else
+            {
+                directions.AddRange(maps.GetDirections(org,dest,TravelMode.Walking));
+            }
+
+            return directions;
         }
     }
 }

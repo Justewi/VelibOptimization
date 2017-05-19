@@ -13,9 +13,10 @@ namespace Velibs
         public Station(XmlNode node)
         {
             Number = Convert.ToInt32(node.Attributes["number"].Value);
+            string test = node.Attributes["lat"].Value;
             Coordonnes = new Coordonnes(
-                Convert.ToDouble(node.Attributes["lat"].Value),
-                Convert.ToDouble(node.Attributes["lng"].Value)
+                Convert.ToDouble(double.Parse(node.Attributes["lat"].Value,System.Globalization.CultureInfo.InvariantCulture)),
+                Convert.ToDouble(double.Parse(node.Attributes["lng"].Value, System.Globalization.CultureInfo.InvariantCulture))
             );
             Name = node.Attributes["name"].Value;
             Address = node.Attributes["fullAddress"].Value;
