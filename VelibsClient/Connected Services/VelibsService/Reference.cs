@@ -16,10 +16,10 @@ namespace VelibsClient.VelibsService {
     public interface IVelibsOptimisation {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibsOptimisation/GetDirections", ReplyAction="http://tempuri.org/IVelibsOptimisation/GetDirectionsResponse")]
-        string GetDirections(string origin, string destination);
+        string[] GetDirections(string origin, string destination);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibsOptimisation/GetDirections", ReplyAction="http://tempuri.org/IVelibsOptimisation/GetDirectionsResponse")]
-        System.Threading.Tasks.Task<string> GetDirectionsAsync(string origin, string destination);
+        System.Threading.Tasks.Task<string[]> GetDirectionsAsync(string origin, string destination);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,11 +49,11 @@ namespace VelibsClient.VelibsService {
                 base(binding, remoteAddress) {
         }
         
-        public string GetDirections(string origin, string destination) {
+        public string[] GetDirections(string origin, string destination) {
             return base.Channel.GetDirections(origin, destination);
         }
         
-        public System.Threading.Tasks.Task<string> GetDirectionsAsync(string origin, string destination) {
+        public System.Threading.Tasks.Task<string[]> GetDirectionsAsync(string origin, string destination) {
             return base.Channel.GetDirectionsAsync(origin, destination);
         }
     }

@@ -25,6 +25,7 @@
     <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="b2d93d5c-49d9-4cdf-9eaf-ae9bbdc6259e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Velibs/VelibsOptimisation/mex" />
     <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="965351b3-6b0c-4fc2-9060-8f26911fd7b9" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Velibs/VelibsOptimisation/mex" />
     <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="f1937d4b-bfe5-4471-a9cd-2154a1bac583" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Velibs/VelibsOptimisation/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="91f06384-d06d-483e-80d1-c1165a5d531c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Velibs/VelibsOptimisation/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

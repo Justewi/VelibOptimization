@@ -11,7 +11,7 @@ namespace Velibs
     public interface IVelibsOptimisation
     {
         [OperationContract]
-        string GetDirections(string origin, string destination);
+        List<string> GetDirections(string origin, string destination);
         
     }
 }
