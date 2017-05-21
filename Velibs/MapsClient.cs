@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
 
 namespace Velibs
@@ -27,7 +28,11 @@ namespace Velibs
             List<string> route = new List<string>();
             foreach (JToken step in steps)
             {
-                route.Add(step["html_instructions"].ToString());
+                string stepStr = step["html_instructions"].ToString();
+                stepStr = Regex.Replace(stepStr, "<[^>]*(>|$)", " ");
+                stepStr = Regex.Replace(stepStr, "&nbsp;", "");
+                stepStr = Regex.Replace(stepStr, "  ", " ");
+                route.Add(stepStr);
             }
 
             return route;
