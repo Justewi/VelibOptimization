@@ -55,35 +55,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\VelibsService\Arrays.xsd">
+    <None Include="Connected Services\VelibsService\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\VelibsService\service.wsdl" />
-    <None Include="Connected Services\VelibsService\service.xsd">
+    <None Include="Connected Services\VelibsService\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\VelibsService\service1.xsd">
+    <None Include="Connected Services\VelibsService\item2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\VelibsService\VelibsOptimisation.wsdl" />
     <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\VelibsService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\VelibsService\item.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\VelibsService\configuration91.svcinfo" />

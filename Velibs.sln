@@ -5,7 +5,12 @@ VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Velibs", "Velibs\Velibs.csproj", "{FB2259EE-36E4-4FAF-9287-DAC586772E52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VelibsClient", "VelibsClient\VelibsClient.csproj", "{56CBE90F-6092-4691-A912-33233CC7A7FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VelibsClientSOAP", "VelibsClient\VelibsClientSOAP.csproj", "{56CBE90F-6092-4691-A912-33233CC7A7FF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FB2259EE-36E4-4FAF-9287-DAC586772E52} = {FB2259EE-36E4-4FAF-9287-DAC586772E52}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VelibsClientTCP", "VelibsClientTCP\VelibsClientTCP.csproj", "{C1727C0E-D202-4F3E-9A10-48CDE87A7AE6}"
 	ProjectSection(ProjectDependencies) = postProject
 		{FB2259EE-36E4-4FAF-9287-DAC586772E52} = {FB2259EE-36E4-4FAF-9287-DAC586772E52}
 	EndProjectSection
@@ -24,6 +29,10 @@ Global
 		{56CBE90F-6092-4691-A912-33233CC7A7FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56CBE90F-6092-4691-A912-33233CC7A7FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56CBE90F-6092-4691-A912-33233CC7A7FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1727C0E-D202-4F3E-9A10-48CDE87A7AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1727C0E-D202-4F3E-9A10-48CDE87A7AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1727C0E-D202-4F3E-9A10-48CDE87A7AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1727C0E-D202-4F3E-9A10-48CDE87A7AE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

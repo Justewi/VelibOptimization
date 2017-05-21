@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="93afb918-93f6-4832-9d52-075014ab0479" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="aa0c8d27-7795-4a54-a4b4-6a75fb450805" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:8733/Velibs/VelibsOptimisation/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="edb8c3cd-c2b2-4171-82fb-c07ff1792eac" SourceId="1" SourceUrl="http://localhost:8733/Velibs/VelibsOptimisation/?disco" />
-    <MetadataFile FileName="VelibsOptimisation.wsdl" MetadataType="Wsdl" ID="f337f3a5-c4c0-420d-9d7c-027dcada03d7" SourceId="1" SourceUrl="http://localhost:8733/Velibs/VelibsOptimisation/?wsdl" />
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="0008cacd-89d2-4d85-9c07-4f1faef37ba3" SourceId="1" SourceUrl="http://localhost:8733/Velibs/VelibsOptimisation/?xsd=xsd0" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="b3e16c65-e07d-475d-80c5-33ad446e5674" SourceId="1" SourceUrl="http://localhost:8733/Velibs/VelibsOptimisation/?xsd=xsd1" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="68bcead2-dc26-48b8-9414-a5d7bc7e442d" SourceId="1" SourceUrl="http://localhost:8733/Velibs/VelibsOptimisation/?xsd=xsd2" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="1c2e4ece-4a15-45b5-827d-0928ad0a1804" SourceId="1" SourceUrl="http://localhost:8733/Velibs/VelibsOptimisation/?disco" />
+    <MetadataFile FileName="VelibsOptimisation.wsdl" MetadataType="Wsdl" ID="87f9fac3-c183-448d-a514-179a55972573" SourceId="1" SourceUrl="http://localhost:8733/Velibs/VelibsOptimisation/?wsdl" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="4edea46a-31dc-4f47-ba78-8a14cbfdcca9" SourceId="1" SourceUrl="http://localhost:8733/Velibs/VelibsOptimisation/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="7476b29e-63d5-4998-a4a1-0855b7b5526d" SourceId="1" SourceUrl="http://localhost:8733/Velibs/VelibsOptimisation/?xsd=xsd1" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="4cfff7ec-eb94-45d5-b2cf-57e65ecdee4a" SourceId="1" SourceUrl="http://localhost:8733/Velibs/VelibsOptimisation/?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
