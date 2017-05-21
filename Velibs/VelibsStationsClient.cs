@@ -47,8 +47,21 @@ namespace Velibs
                 double dst = point.Distance(pair.Value.Coordonnes);
                 if (dst < distance)
                 {
-                    station = pair.Value;
-                    distance = dst;
+                    WebRequest request = WebRequest.Create("http://www.velib.paris/service/stationdetails/"+pair.Value.Number);
+                    WebResponse response = request.GetResponse();
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    string responseFromServer = reader.ReadToEnd();
+                    reader.Close();
+                    response.Close();
+
+                    XmlDocument doc = new XmlDocument();
+                    doc.LoadXml(responseFromServer);
+                    XmlNode marker = doc.DocumentElement.FirstChild;
+                    if (Convert.ToInt32(marker.Attributes["available"]) > 0)
+                    {
+                        station = pair.Value;
+                        distance = dst;
+                    }
                 }
             }
             return station;

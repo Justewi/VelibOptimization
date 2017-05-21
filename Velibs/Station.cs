@@ -9,11 +9,14 @@ namespace Velibs
         public Coordonnes Coordonnes { get; }
         public string Name { get; }
         public string Address { get; }
+        
 
         public Station(XmlNode node)
         {
+            //ajouter ici la condition pour voir si il est dispo
             Number = Convert.ToInt32(node.Attributes["number"].Value);
             string test = node.Attributes["lat"].Value;
+
             Coordonnes = new Coordonnes(
                 Convert.ToDouble(double.Parse(node.Attributes["lat"].Value,System.Globalization.CultureInfo.InvariantCulture)),
                 Convert.ToDouble(double.Parse(node.Attributes["lng"].Value, System.Globalization.CultureInfo.InvariantCulture))
